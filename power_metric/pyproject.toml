@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "power-metric"
+version = "0.1.0"
+description = "Adaptive scaling predictor for language model training. Reduces prediction unreliability from ~96% to ~0% vs fixed power-law extrapolation."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Cole Cantrell", email = "cole@paradigmbridge.tech" }
+]
+keywords = [
+    "language-models", "scaling-laws", "training-dynamics",
+    "machine-learning", "nlp"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.21",
+    "scipy>=1.7",
+]
+
+[project.optional-dependencies]
+examples = [
+    "matplotlib>=3.5",
+    "pandas>=1.3",
+]
+dev = [
+    "pytest>=7.0",
+    "matplotlib>=3.5",
+    "pandas>=1.3",
+]
+
+[project.urls]
+Homepage    = "https://github.com/HauntedKernel/power-metric"
+Repository  = "https://github.com/HauntedKernel/power-metric"
+"Bug Tracker" = "https://github.com/HauntedKernel/power-metric/issues"
